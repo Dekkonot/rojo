@@ -54,7 +54,7 @@ As mentioned above, the Studio plugin uses the web server to receive patches tha
 
 To actually apply the patch to the Studio datamodel, the plugin has a Reconciler. The Reconciler uses the InstanceMap to find the instances mentioned by the patch, and then it attempts to modify/create/destroy instances as specified in the patch. It will also create and return a new patch that contains all of the operations that failed to apply (effectively creating a patch that if applied, would fix the failures), which is used to display warnings to the end user.
 
-The first time the plugin connects to the server is a bit of a special case. The server gives the plugin the current state, which is first used to hydrate the InstanceMap with all the initially known instances. Then, the Reconciler computes a patch by diffing the datamodel with the server state. This is known as the "catch up" patch, and that is what is shown in the Confirming page in the plugin. When that catch up patch is applied, the Studio datamodel should match the Rojo server and subsequent patches will be able to apply cleanly.
+The first time the plugin connects to the server is a special case, since there are no changes yet. The server sends the plugin the initial state, which is first used to hydrate the InstanceMap with all the currently known instances. Then, the Reconciler computes a patch by diffing the datamodel with the server state. This is known as the "catch up" patch, and that is what is shown in the Confirming page in the plugin. When that catch up patch is applied, the Studio datamodel should match the Rojo server and subsequent patches will be able to apply cleanly.
 
 ## Data Structures
 
