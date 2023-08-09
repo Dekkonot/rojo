@@ -301,6 +301,13 @@ fn infer_class_name(name: &str, parent_class: Option<&str>) -> Option<Cow<'stati
         if name == "StarterPlayerScripts" || name == "StarterCharacterScripts" {
             return Some(Cow::Owned(name.to_owned()));
         }
+    } else if parent_class == "Workspace" {
+        // Workspace has a special Terrain class in the same vein as
+        // `StarterPlayerScripts` and `StarterCharacterScripts`.
+
+        if name == "Terrain" {
+            return Some(Cow::Owned(name.to_owned()));
+        }
     }
 
     None

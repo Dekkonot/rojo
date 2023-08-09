@@ -25,6 +25,7 @@
 * Added rich Source diffs in patch visualizer ([#748])
 * Fix PatchTree performance issues ([#755])
 * Don't override the initial enabled state for source diffing ([#760])
+* Derive `Terrain`'s class in project files if it's under Workspace
 
 [#761]: https://github.com/rojo-rbx/rojo/pull/761
 [#745]: https://github.com/rojo-rbx/rojo/pull/745
