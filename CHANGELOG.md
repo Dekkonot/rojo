@@ -1,6 +1,8 @@
 # Rojo Changelog
 
 ## Unreleased Changes
+
+## [7.4.1] - February 20, 2024
 * Fixed incorrect results when building model pivots ([#865])
 * Fixed incorrect results when serving model pivots ([#868])
 * Rojo now converts any line endings to LF, preventing spurious diffs when syncing Lua files on Windows ([#854])
