@@ -4,6 +4,7 @@ mod build;
 mod doc;
 mod fmt_project;
 mod init;
+mod patch;
 mod plugin;
 mod serve;
 mod sourcemap;
@@ -18,6 +19,7 @@ pub use self::build::BuildCommand;
 pub use self::doc::DocCommand;
 pub use self::fmt_project::FmtProjectCommand;
 pub use self::init::{InitCommand, InitKind};
+pub use self::patch::PatchCommand;
 pub use self::plugin::{PluginCommand, PluginSubcommand};
 pub use self::serve::ServeCommand;
 pub use self::sourcemap::SourcemapCommand;
@@ -46,6 +48,7 @@ impl Options {
             Subcommand::FmtProject(subcommand) => subcommand.run(),
             Subcommand::Doc(subcommand) => subcommand.run(),
             Subcommand::Plugin(subcommand) => subcommand.run(),
+            Subcommand::Patch(subcommand) => subcommand.run(),
         }
     }
 }
@@ -119,6 +122,7 @@ pub enum Subcommand {
     FmtProject(FmtProjectCommand),
     Doc(DocCommand),
     Plugin(PluginCommand),
+    Patch(PatchCommand),
 }
 
 pub(super) fn resolve_path(path: &Path) -> Cow<'_, Path> {
