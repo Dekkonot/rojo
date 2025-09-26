@@ -1,0 +1,6 @@
+{
+  "name": "script-update",
+  "tree": {
+    "$path": "module.luau"
+  }
+}

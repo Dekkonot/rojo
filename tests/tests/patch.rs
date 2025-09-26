@@ -8,13 +8,11 @@ use crate::rojo_test::io_util::{get_working_dir_path, PATCH_TESTS_PATH, ROJO_PAT
 macro_rules! patch_tests {
     ( $($test_name: ident,)* ) => {
         $(
-            paste::item! {
-                #[test]
-                fn [<patch_ $test_name>]() {
-                    let _ = env_logger::try_init();
+            #[test]
+            fn $test_name() {
+                let _ = env_logger::try_init();
 
-                    run_patch_test(stringify!($test_name));
-                }
+                run_patch_test(stringify!($test_name));
             }
         )*
     };
@@ -22,6 +20,7 @@ macro_rules! patch_tests {
 
 patch_tests! {
     baseplate,
+    script_update,
 }
 
 fn run_patch_test(test_name: &str) {

@@ -1,0 +1,18 @@
+---
+source: tests/tests/patch.rs
+expression: contents
+---
+<roblox version="4">
+  <Item class="ModuleScript" referent="0">
+    <Properties>
+      <string name="Name">script-update</string>
+      <string name="Source"><![CDATA[local module = {}
+
+-- hi
+module.patched_value = 1337
+
+return module
+]]></string>
+    </Properties>
+  </Item>
+</roblox>
