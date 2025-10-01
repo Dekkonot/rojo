@@ -1,0 +1,12 @@
+{
+  "name": "remove_instances",
+  "tree": {
+    "$className": "Folder",
+    "item1": {
+      "$className": "Folder"
+    },
+    "item3": {
+      "$className": "Folder"
+    }
+  }
+}

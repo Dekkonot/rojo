@@ -21,6 +21,8 @@ macro_rules! patch_tests {
 patch_tests! {
     baseplate,
     script_update,
+    remove_instances,
+    no_op,
 }
 
 fn run_patch_test(test_name: &str) {

@@ -1,0 +1,14 @@
+{
+  "name": "add_properties",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "NumberValue": {
+        "$className": "NumberValue",
+        "$properties": {
+          "Value": 10
+        }
+      }
+    }
+  }
+}

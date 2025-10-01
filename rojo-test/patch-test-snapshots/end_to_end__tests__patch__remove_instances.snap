@@ -1,0 +1,22 @@
+---
+source: tests/tests/patch.rs
+assertion_line: 79
+expression: contents
+---
+<roblox version="4">
+  <Item class="Folder" referent="0">
+    <Properties>
+      <string name="Name">remove_instances</string>
+    </Properties>
+    <Item class="Folder" referent="1">
+      <Properties>
+        <string name="Name">item1</string>
+      </Properties>
+    </Item>
+    <Item class="Folder" referent="2">
+      <Properties>
+        <string name="Name">item3</string>
+      </Properties>
+    </Item>
+  </Item>
+</roblox>
